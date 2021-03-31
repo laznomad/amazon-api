@@ -40,15 +40,6 @@ def unauthorized():
 
 
 
-############# analise for fake reviews
-############# multithreaded scraping  
-############# proxy rotation https://www.reddit.com/r/webscraping/comments/ab9huf/bye_bye_403_building_a_filter_resistant_web/
-############# login & UI registration 
-
-
-
-
-
 app = Flask(__name__)
 
 
@@ -342,9 +333,7 @@ def browser_connect(url):
     #options.add_argument('user-agent=',headers)
         
 
-    #browserdriver = webdriver.Chrome(ChromeDriverManager().install())
-
-    browserdriver = webdriver.Chrome(options=options, executable_path=r'/Users/fabio.fanni/Downloads/chromedriver')
+    browserdriver = webdriver.Chrome(ChromeDriverManager().install())
 
     response = browserdriver.get(url)
 
@@ -419,7 +408,7 @@ def product_price(asin):
 
 def p_test():
 
-    test_url = 'http://fabio.io'
+    test_url = ''
 
 
     output = get_price(test_url)
